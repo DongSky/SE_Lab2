@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+   <package name="helloworld" extends="struts-default">
+      <action name="loginaction" 
+         class="lab2.LoginAction"
+         method="execute">
+         <result name="success">/index.jsp</result>
+         <result name="error">/error.jsp</result>
+      </action>
+      <action name="hello" 
+            class="lab2.HelloWorld" 
+            method="execute">
+            <result name="success">/HelloWorld.jsp</result>
+      </action>
+      <action name="Addbookaction" 
+            class="lab2.AddBookAction" 
+            method="execute">
+            <result name="success">/AddBookSuccess.jsp</result>
+            <result name="error">/AddBookError.jsp</result>
+            <result name="lacked">/AddBookInfoLacked.jsp</result>
+      </action>
+      <action name="updatebookaction" 
+            class="lab2.UpdateBookQuery" 
+            method="execute">
+            <result name="success">/UpdateSuccess.jsp</result>
+            <result name="error">/UpdateFail.jsp</result>
+            <result name="lacked">/UpdateInfoLacked.jsp</result>
+      </action>
+   </package>
+</struts>
